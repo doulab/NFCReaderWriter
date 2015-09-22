@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent" >
+
+  <!-- Header aligned to top -->
+  <RelativeLayout
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:background="#FFF"
+    android:gravity="center"
+     android:layout_marginBottom="10dp" >
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="5dp"
+      android:text="Ecriture et Lecture NFC"
+      android:textColor="#000000"
+      android:textSize="20sp" />
+  </RelativeLayout>
+
+  <!-- Footer aligned to bottom -->
+  <RelativeLayout
+    android:id="@+id/footer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="#FFF"
+    android:gravity="center" >
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="5dp"
+      android:text="copyright © Sensoft"
+      android:textColor="#000000"
+      android:textSize="20sp" />
+  </RelativeLayout>
+
+  <!-- Scrollable Content below header and above footer -->
+  <ScrollView
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_above="@id/footer"
+    android:layout_below="@id/header" >
+
+    <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_horizontal"
+      android:orientation="vertical" 
+    android:layout_marginTop="10dp"  >
+
+     <Button
+android:id="@+id/btn_read"
+android:text="Lire NFC"
+android:textColor="#FFFFFF"
+android:textSize="30sp"
+android:layout_width="270dp"
+android:layout_height="60dp"
+ android:layout_marginBottom="10dp"
+android:background="@drawable/buttonshape"
+ android:onClick="readNFC"
+/>
+     
+     
+        <Button
+android:id="@+id/btn_write"
+android:text="Ecriture NFC"
+android:textColor="#FFFFFF"
+android:textSize="30sp"
+android:layout_width="270dp"
+android:layout_height="60dp"
+ android:layout_marginBottom="10dp"
+android:background="@drawable/buttonshape"
+ android:onClick="writeNFC"
+/>
+          <Button
+android:id="@+id/btn_write"
+android:text="Ecriture URL"
+android:textColor="#FFFFFF"
+android:textSize="30sp"
+android:layout_width="270dp"
+android:layout_height="60dp"
+ android:layout_marginBottom="10dp"
+android:background="@drawable/buttonshape"
+ android:onClick="writeURL"
+/>
+ 
+    </LinearLayout>
+
+  </ScrollView>
+
+</RelativeLayout>
